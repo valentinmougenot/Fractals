@@ -2,8 +2,8 @@
 // Created by valentin mougenot on 01/11/2022.
 //
 
-#include "Fractal.hpp"
-#include "Settings.hpp"
+#include "../includes/Fractal.hpp"
+#include "../includes/Settings.hpp"
 
 
 Fractal::Fractal() {

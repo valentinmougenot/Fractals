@@ -2,8 +2,8 @@
 // Created by valentin mougenot on 01/11/2022.
 //
 
-#include "Julia.hpp"
-#include "Settings.hpp"
+#include "../includes/Julia.hpp"
+#include "../includes/Settings.hpp"
 
 Julia::Julia() {
     xMin = -2;
@@ -13,7 +13,6 @@ Julia::Julia() {
 }
 
 void Julia::createImage() {
-#pragma omp parallel for
     for(int px = 0; px < WINDOW_WIDTH; ++px) {
         for(int py = 0; py < WINDOW_HEIGHT; ++py) {
             double x = xMin + (xMax - xMin) * px / WINDOW_WIDTH;

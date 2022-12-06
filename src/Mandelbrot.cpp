@@ -2,8 +2,8 @@
 // Created by valentin mougenot on 01/11/2022.
 //
 
-#include "Mandelbrot.hpp"
-#include "Settings.hpp"
+#include "../includes/Mandelbrot.hpp"
+#include "../includes/Settings.hpp"
 
 Mandelbrot::Mandelbrot() {
     xMin = -2;
@@ -13,7 +13,6 @@ Mandelbrot::Mandelbrot() {
 }
 
 void Mandelbrot::createImage() {
-#pragma omp parallel for
     for(int px = 0; px < WINDOW_WIDTH; ++px) {
         for(int py = 0; py < WINDOW_HEIGHT; ++py) {
             double x0 = xMin + (xMax - xMin) * px / WINDOW_WIDTH;

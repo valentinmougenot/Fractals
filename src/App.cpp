@@ -2,20 +2,20 @@
 // Created by valentin mougenot on 01/11/2022.
 //
 
-#include "App.hpp"
-#include "Settings.hpp"
+#include "../includes/App.hpp"
+#include "../includes/Settings.hpp"
 
-#include "Julia.hpp"
-#include "Mandelbrot.hpp"
-#include "BurningShip.hpp"
-#include "Newton.hpp"
+#include "../includes/Julia.hpp"
+#include "../includes/Mandelbrot.hpp"
+#include "../includes/BurningShip.hpp"
+#include "../includes/Newton.hpp"
 
 App::App(const std::string &name) {
     App::name = name;
     window.create(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), name);
 }
 
-void App::render() {
+void App::run() {
     Fractal *fractal = new Julia();
     fractal->update();
 

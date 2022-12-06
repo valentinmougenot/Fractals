@@ -1,7 +1,7 @@
-#include "App.hpp"
+#include "../includes/App.hpp"
 
 int main() {
     App app("Fractals");
-    app.render();
+    app.run();
     return 0;
 }

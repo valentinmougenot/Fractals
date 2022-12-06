@@ -2,8 +2,8 @@
 // Created by valentin mougenot on 01/11/2022.
 //
 
-#include "Newton.hpp"
-#include "Settings.hpp"
+#include "../includes/Newton.hpp"
+#include "../includes/Settings.hpp"
 
 Newton::Newton() {
     xMin = -2;
@@ -21,7 +21,6 @@ Newton::Newton(const std::complex<double> &root1, const std::complex<double> &ro
 }
 
 void Newton::createImage() {
-#pragma omp parallel for
     for (int px = 0; px < WINDOW_WIDTH; ++px) {
         for (int py = 0; py < WINDOW_HEIGHT; ++py) {
             std::complex<double> z = std::complex<double>(xMin + (xMax - xMin) * px / WINDOW_WIDTH,

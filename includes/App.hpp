@@ -16,7 +16,7 @@ private:
 
 public:
     explicit App(const std::string& name);
-    void render();
+    void run();
 };
 
 #endif //FRACTALS_APP_HPP

@@ -4,8 +4,8 @@
 
 #include <cmath>
 
-#include "BurningShip.hpp"
-#include "Settings.hpp"
+#include "../includes/BurningShip.hpp"
+#include "../includes/Settings.hpp"
 
 BurningShip::BurningShip() {
     xMin = -2.5;
@@ -15,7 +15,6 @@ BurningShip::BurningShip() {
 }
 
 void BurningShip::createImage() {
-#pragma omp parallel for
     for(int px = 0; px < WINDOW_WIDTH; ++px) {
         for(int py = 0; py < WINDOW_HEIGHT; ++py) {
             double x0 = xMin + (xMax - xMin) * px / WINDOW_WIDTH;
